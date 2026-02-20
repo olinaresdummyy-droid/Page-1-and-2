@@ -55,25 +55,10 @@
     </footer>
 document.addEventListener('submit', (e) => {
     e.preventDefault();
-    const section = e.target.closest('.right-section');
-    const isApp = e.target.id === 'applicationForm';
-
-    section.style.opacity = '0';
-
-    setTimeout(() => {
-        section.innerHTML = `
-            <h1 style="font-weight: 300; font-size: 20px;">${isApp ? 'APPLICATION SENT' : 'MESSAGE SENT'}</h1>
-            <div class="star-list">
-                <p style="font-weight: 300; color: #4b2c85; line-height: 1.6;">
-                    ${isApp ? 'Your portfolio is being reviewed.' : 'We will respond within 24 hours.'}
-                </p>
-                <a href="index.html" class="star-item">Back to Home</a>
-            </div>
-            <p class="copyright" style="margin-top: 30px; font-weight: 300;">© 2026 Dream Star, Inc</p>
-        `;
-        section.style.opacity = '1';
-    }, 400);
+    alert('Has been submitted');
+    window.location.href = 'index.html';
 });
 </body>
 </html>
+
 
