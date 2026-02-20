@@ -1,0 +1,94 @@
+/* --- 1. SETTINGS & VARIABLES --- */
+:root {
+  --primary: #222;
+  --accent: #6d5c4b; 
+  --bg: #e8dcd1;
+  --white: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --pink-text: #cf7b7b;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+/* --- 2. NAVIGATION --- */
+nav {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 800; 
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 14px 35px;
+  background: #fff;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* --- 3. THE BOX (Shared Container) --- */
+.main-box {
+  width: 90%;
+  max-width: 850px;
+  margin: 20px auto 60px;
+  padding: 40px;
+  background: var(--white);
+  backdrop-filter: blur(15px);
+  border-radius: 40px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+/* --- 4. CAROUSEL (Home Page Only) --- */
+.carousel-container { position: relative; width: 90%; max-width: 1000px; margin: 20px auto; }
+.carousel { width: 100%; height: 400px; overflow: hidden; border-radius: 40px; position: relative; }
+.slides { display: flex; width: 300%; height: 100%; transition: transform 0.8s ease-in-out; }
+.slide { width: 33.333%; height: 100%; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+
+input[name="slider"] { display: none; }
+#item-1:checked ~ .slides { transform: translateX(0); }
+#item-2:checked ~ .slides { transform: translateX(-33.333%); }
+#item-3:checked ~ .slides { transform: translateX(-66.666%); }
+
+/* --- 5. FORMS (Apply & Contact) --- */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.input-group { display: flex; flex-direction: column; margin-bottom: 15px; }
+label { font-weight: 600; font-size: 12px; margin-bottom: 5px; text-transform: uppercase; }
+input, select, textarea { 
+  padding: 12px; border-radius: 15px; border: 1px solid #ccc; background: white; width: 100%; box-sizing: border-box;
+}
+
+.submit-btn {
+  width: 100%; padding: 15px; background: var(--primary); color: white; border: none; 
+  border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 20px;
+}
+
+/* --- 6. FOOTER --- */
+.site-footer { text-align: center; margin-top: 40px; padding: 20px; }
+.site-footer ul { display: flex; justify-content: center; gap: 30px; list-style: none; padding: 0; }
+.footer-line { border-top: 1px solid rgba(0,0,0,0.1); margin: 15px auto; width: 80%; }
+.site-footer a { text-decoration: none; color: #666; font-size: 14px; font-weight: 600; }
+
+@media (max-width: 600px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .carousel { height: 250px; }
+}
