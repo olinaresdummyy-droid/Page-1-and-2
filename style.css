@@ -26,6 +26,7 @@ nav {
 
 .nav-logo {
     height: 120px;
+    width: auto;
     display: block;
 }
 
@@ -255,5 +256,6 @@ footer {
     .footer-links { gap: 15px; flex-wrap: wrap; }
 
 }
+
 
 
