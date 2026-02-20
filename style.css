@@ -1,4 +1,4 @@
-/* --- 1. GLOBAL SETTINGS --- */
+
 :root {
     --bg-color: #e8dcd1;
     --accent: #cf7b7b;
@@ -15,7 +15,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- 2. NAVIGATION (Logo Left, Links Right) --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -55,7 +54,7 @@ nav {
     transform: translateY(-2px);
 }
 
-/* --- 3. PURE CSS CAROUSEL FIX --- */
+
 .carousel-container {
     width: 90%;
     max-width: 1100px;
@@ -69,7 +68,7 @@ nav {
 
 .slides {
     display: flex;
-    width: 300%; /* Total width for 3 images */
+    width: 300%; 
     height: 100%;
     transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -85,12 +84,11 @@ nav {
     object-fit: cover;
 }
 
-/* Carousel Logic using Siblings Selector */
+
 #i1:checked ~ .slides { transform: translateX(0); }
 #i2:checked ~ .slides { transform: translateX(-33.333%); }
 #i3:checked ~ .slides { transform: translateX(-66.666%); }
 
-/* Dot Navigation */
 .dots {
     position: absolute;
     bottom: 30px;
@@ -114,11 +112,11 @@ nav {
 #i2:checked ~ .dots .d2, 
 #i3:checked ~ .dots .d3 {
     background: #ffffff;
-    width: 35px; /* Pill shape for active dot */
+    width: 35px; 
     border-radius: 20px;
 }
 
-/* --- 4. CONTENT BOX (The Overlap) --- */
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -129,7 +127,7 @@ nav {
     background: var(--white);
     padding: 50px;
     border-radius: 40px;
-    margin: -60px auto 40px; /* Pulls box up over carousel */
+    margin: -60px auto 40px; 
     width: 85%;
     max-width: 900px;
     position: relative;
@@ -143,7 +141,6 @@ nav {
     font-weight: bold;
 }
 
-/* --- 5. FORMS (Apply & Contact) --- */
 .form-group {
     margin-bottom: 25px;
 }
@@ -211,7 +208,7 @@ input:focus, select:focus, textarea:focus {
     transform: scale(1.01);
 }
 
-/* --- 6. FOOTER (Matches your screenshot) --- */
+
 footer {
     padding: 40px 0;
     text-align: center;
@@ -251,10 +248,11 @@ footer {
     margin: 0;
 }
 
-/* --- 7. RESPONSIVE DESIGN --- */
+
 @media (max-width: 768px) {
     nav { flex-direction: column; gap: 20px; }
     .carousel-container { height: 300px; width: 95%; }
     .main-content-box { width: 95%; padding: 30px; margin-top: -30px; }
     .footer-links { gap: 15px; flex-wrap: wrap; }
+
 }
