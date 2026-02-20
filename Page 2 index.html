@@ -73,14 +73,17 @@
         </ul>
         <p class="copyright">© 2026 Dream Star, Inc</p>
     </footer>
-document.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Has been submitted');
-    window.location.href = 'index.html';
-});
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        alert("Success! Your application has been submitted. We will contact you within 4 days.");
+        this.reset();
+    });
+</script>
 </body>
 
 </html>
+
 
 
 
